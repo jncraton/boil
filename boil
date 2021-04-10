@@ -21,3 +21,12 @@ cat << EOF > "$file"
 </html>
 EOF
 fi
+
+if [ ${file: -2} == ".c" ]
+then
+cat << EOF > "$file"
+int main(int argc, char** argv) {
+  return 0;
+}
+EOF
+fi
